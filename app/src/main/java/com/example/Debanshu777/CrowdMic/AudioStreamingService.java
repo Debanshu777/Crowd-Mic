@@ -9,7 +9,6 @@ import android.os.Build;
 import android.os.IBinder;
 import androidx.annotation.RequiresApi;
 import android.util.Log;
-
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -80,9 +79,7 @@ public class AudioStreamingService extends Service {
 
                     inputStream.close();
                     audioTrack.release();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } catch (NullPointerException e) {
+                } catch (IOException | NullPointerException e) {
                     e.printStackTrace();
                 }
             }

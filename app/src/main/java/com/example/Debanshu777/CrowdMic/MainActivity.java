@@ -167,9 +167,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         centerDeviceIcon.setOnClickListener(this);
 
         // center button position
-        Display display = getWindowManager().getDefaultDisplay();
+        Display display = getApplicationContext().getDisplay();
         Point size = new Point();
-        display.getSize(size);
+        display.getRealSize(size);
         device_points.add(new Point(size.x / 2, size.y / 2));
         Log.d("MainActivity", size.x + "  " + size.y);
 
@@ -193,12 +193,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         try {
             gps_enabled = lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
-        } catch (Exception ex) {
+        } catch (Exception ignored) {
         }
 
         try {
             network_enabled = lm.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
-        } catch (Exception ex) {
+        } catch (Exception ignored) {
         }
 
         if (!gps_enabled && !network_enabled) {
@@ -388,15 +388,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     };
 
     Point generateRandomPosition(){
-        Display display = getWindowManager(). getDefaultDisplay();
+        Display display = getApplicationContext().getDisplay();
         Point size = new Point();
-        display.getSize(size);
+        display.getRealSize(size);
         int SCREEN_WIDTH = size.x;
         int SCREEN_HEIGHT = size.y;
 
         int height_start = SCREEN_HEIGHT / 2 - 300;
-        int x = 0;
-        int y = 0;
+        int x;
+        int y;
 
         do{
             x = (int)(Math.random() * SCREEN_WIDTH);
