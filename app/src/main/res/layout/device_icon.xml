@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
+    android:layout_height="80dp"
+    android:layout_width="80dp"
+    android:padding="5dp"
+    android:background="@drawable/rounded_button"
     android:orientation="vertical">
     <ImageView
+        android:layout_gravity="center_horizontal"
         android:id="@+id/myImageView"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:src="@drawable/phone2" />
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_speaker" />
 
     <TextView
         android:id="@+id/myImageViewText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="12dp"
         android:layout_gravity="center_horizontal"
         style="@style/Base.TextAppearance.AppCompat.Medium"
         android:text="Hello"

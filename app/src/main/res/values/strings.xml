@@ -4,4 +4,7 @@
     <string name="open_location_settings">Goto Location Settings</string>
     <string name="Cancel">Cancel</string>
     <string name="gps_network_not_enabled_title">GPS Disabled</string>
+    <string name="mic_image">Mic Image Placeholder</string>
+    <string name="connection_status_text">Connection Status</string>
+    <string name="talk">TALK</string>
 </resources>

@@ -13,14 +13,23 @@
     app:rb_scale="6">
 
 
-    <Button
+<!--    <Button-->
+<!--        android:id="@+id/send_file_btn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:background="@drawable/rounded_button"-->
+<!--        android:text="TALK"-->
+<!--        android:textSize="35sp" />-->
+    <ImageView
         android:id="@+id/send_file_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_centerInParent="true"
         android:background="@drawable/rounded_button"
-        android:text="TALK"
-        android:textSize="35sp" />
+        android:src="@drawable/ic_mic_on"
+        android:contentDescription="@string/talk" />
 
 
 </com.skyfishjy.library.RippleBackground>
